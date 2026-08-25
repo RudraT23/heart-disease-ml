@@ -34,4 +34,13 @@ ascending= sort_order == "Ascending"
 
 sorted_data = sort_dataset(dataset,sort_column,ascending)
 
-st.dataframe(sorted_data)
+
+rows_per_page=st.selectbox("Rows per page",[10,20,50,100])
+total_rows=len(sorted_data)
+total_pages=(total_rows+rows_per_page-1)//rows_per_page
+page = st.number_input("Page",min_value=1,max_value=total_pages,value=1,step=1)
+start_index=(page-1)*rows_per_page
+end_index=start_index+rows_per_page
+page_data=sorted_data[start_index:end_index]
+st.dataframe(page_data)
+
