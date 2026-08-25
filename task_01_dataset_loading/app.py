@@ -18,7 +18,20 @@ def load_dataset(filename):
     file.close()
     return data
 dataset=load_dataset("../data/processed.cleveland.data")
+def sort_dataset(data, column, ascending=True):
+    return sorted(
+        data,
+        key=lambda row: row[column] if row[column] is not None else float("-inf"),
+        reverse=not ascending
+    )
 
 st.title("Heart Disease Dataset")
 st.write("Total Rows:", len(dataset))
-st.dataframe(dataset)
+
+sort_column=st.selectbox("Sort By",column_names)
+sort_order=st.selectbox("Sort Order",["Ascending","Descending"])
+ascending= sort_order == "Ascending"
+
+sorted_data = sort_dataset(dataset,sort_column,ascending)
+
+st.dataframe(sorted_data)
