@@ -76,7 +76,7 @@ None
 
 This allows missing values to be detected without using Pandas functions.
 
-🔍 Missing Values Found
+##🔍 Missing Values Found
 
 The dataset contains missing values in two columns:
 
@@ -89,7 +89,8 @@ All other columns contain zero missing values.
 Therefore, the dataset contains a total of:
 
 6 missing values
-🧮 Imputation Techniques
+
+##🧮 Imputation Techniques
 
 Three imputation techniques were implemented manually.
 
@@ -125,7 +126,7 @@ Thal	3
 
 Mode imputation successfully removes all missing values while preserving actual values already present in the dataset.
 
-📊 Method Comparison
+##📊 Method Comparison
 
 The implemented methods produced the following results:
 
@@ -168,7 +169,7 @@ Thal	Mode	3
 
 A detailed comparison and justification is available in REPORT.md.
 
-🔄 Verification
+##🔄 Verification
 
 The application verifies the number of missing values before and after imputation.
 
@@ -186,7 +187,7 @@ This confirms that the implemented imputation process successfully handles the m
 
 The original dataset file is not modified. A freshly loaded copy is used when applying each imputation method.
 
-🖥️ Application Interface
+##🖥️ Application Interface
 
 The Streamlit application provides:
 
@@ -212,7 +213,7 @@ calculate_mean()	Manually calculates mean
 calculate_median()	Manually calculates median
 calculate_mode()	Manually calculates mode
 impute_missing_values()	Applies the selected imputation method
-🚫 Constraints Followed
+##🚫 Constraints Followed
 
 This task was intentionally implemented without using Pandas missing-value functions.
 
@@ -223,7 +224,7 @@ dropna()
 
 Missing value detection and imputation were implemented manually using Python lists, dictionaries, loops, conditions, and arithmetic operations.
 
-📂 Project Structure
+##📂 Project Structure
 task_03_missing_values/
 │
 ├── app.py
@@ -234,7 +235,8 @@ The detailed report is also maintained in the project's central reports director
 
 reports/
 └── task_03_missing_values_report.md
-▶️ How to Run
+
+##▶️ How to Run
 
 Navigate to the task directory:
 
@@ -246,7 +248,7 @@ streamlit run app.py
 
 The application will open in the browser.
 
-📚 Learning Outcome
+##📚 Learning Outcome
 
 This task provided practical understanding of:
 
