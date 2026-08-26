@@ -41,7 +41,7 @@ The objective of this task is to:
 
 The application uses the Cleveland Heart Disease dataset:
 
-```text
+
 data/processed.cleveland.data
 
 The dataset contains:
